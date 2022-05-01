@@ -1,0 +1,24 @@
+{
+  "name": "tooljs-web",
+  "version": "1.0.0",
+  "description": "tooljs-web by duy duc",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/duyduc2003/tooljs-web.git"
+  },
+  "keywords": [
+    "tooljs-web",
+    "tooljs",
+    "tool"
+  ],
+  "author": "DangDuyDuc <dangduyducdangduyduc@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/duyduc2003/tooljs-web/issues"
+  },
+  "homepage": "https://github.com/duyduc2003/tooljs-web#readme"
+}
