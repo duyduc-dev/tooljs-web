@@ -9,7 +9,9 @@ Wish you have a pleasant experience.
 
 # Install
 
-> npm install tooljs-web
+```
+npm install tooljs-web
+```
 
 # Structure project
 
