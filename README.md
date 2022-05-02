@@ -148,4 +148,6 @@ root.render(App);
 
 **Step 2:** Open project at position download and open them.
 
-**Finally:** open `terminal` and type `npm start`
+**Step 3:** open `terminal` and type `npm install` to download dependencies
+
+**Finally:** type `npm start`
