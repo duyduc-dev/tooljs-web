@@ -13,6 +13,18 @@ Wish you have a pleasant experience.
 npm install tooljs-web
 ```
 
+# Usage
+You can start with a simple structured project by clone https://github.com/duyduc2003/start-with-tooljs-web.git or follow `Quick start`.
+
+- `createStore` create store management state of project.
+    * `useSelector` access state of project.
+    * `useDispatch` dispatch data to store.
+    * `connectStore` like `useSelector`, access state of project, this is a HOC.
+    * `createRoot` used to render the interface 
+- `html` used to write html as string in javascript and can insert javascript scripts.
+
+...
+
 # Structure project
 
 ```
@@ -128,3 +140,12 @@ root.render(App);
 **Result:**
 
 ![Result](./img/result-quick-start.png)
+
+
+# How to start project with tooljs-web and webpack
+
+**Step 1:** In your IDE (Visual Studio Code), `ctrl + shift + p`, choose `Git: clone` then copy link github: `https://github.com/duyduc2003/start-with-tooljs-web.git`. And click `Clone from URL`
+
+**Step 2:** Open project at position download and open them.
+
+**Finally:** open `terminal` and type `npm start`
