@@ -27,6 +27,7 @@ npm install tooljs-web
 |   |-- App.js
 |-- index.html
 |-- index.js
+|-- tooljsWeb.js
 ...
 package-lock.json
 package.json
@@ -45,7 +46,7 @@ package.json
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>TOOLJS - WEB</title>
     <!-- link script -->
-   <script defer type="module" src="./index.js"></script>
+    <script defer type="module" src="./index.js"></script>
 </head>
 <body>
     <div id="root"></div>
@@ -53,7 +54,7 @@ package.json
 </html>
 ```
 
-**Step 2:** File `./src/store/reducer.js`, create variable `initState` which is the initial value of `state` parameter of `reducer` function. In addition, the `reducer` function has two more parameters, `type` and `action`. `Type` is the case name, `action` is the action that the user submits data. Finally, we export method `reducer`
+**Step 2:** File `./src/store/reducer.js`, create variable `initState` which is the initial value of `state` parameter of `reducer` function. In addition, the `reducer` function has two more parameters, `type` and `action`. `Type` is the case name, `action` is the action that the user submits data. Finally, we export method `reducer`.
 
 ```Javascript
 // state initial
@@ -78,20 +79,26 @@ const reducer = (state = initState, type, action) => {
 export default reducer;
 ```
 
-**Step 3:** File `./src/store/index.js`, import `createStore` and put `reducer` in the argument of `createStore`. Finally export it all out.
+**Step 3:** File `./tooljsWeb.js`, import package `tooljs-web`, then export all out.
+
+```JavaScript
+export * from './node_modules/tooljs-web/index.js'
+```
+
+**Step 4:** File `./src/store/index.js`, import `createStore` and put `reducer` in the argument of `createStore`. Finally export it all out.
 
 ```Javascript
 // import `createStore`
-import { createStore } from 'tooljs-web';
-import reducer from './reducer';
+import { createStore } from '../../tooljsWeb.js';
+import reducer from './reducer.js';
 
 export const { createRoot, useSelector, connectStore, useDispatch } = createStore(reducer);
 ```
 
-**Step 4:** File `./src/App.js`, import `html` from `tooljs-web`, create functional component `App`.
+**Step 5:** File `./src/App.js`, import `html` from `tooljs-web`, create functional component `App`.
 
 ```Javascript
-import { html } from 'tooljs-web';
+import { html } from '../tooljsWeb.js'
 
 const App = () => {
 
@@ -104,11 +111,11 @@ const App = () => {
 export default App
 ```
 
-**Step 5:** File `./index.js`, import `App` component, import `createRoot` and `render` them.
+**Step 6:** File `./index.js`, import `App` component, import `createRoot` and `render` them.
 
 ```Javascript
-import App from './src/App';
-import { createRoot } from './src/store';
+import App from './src/App.js';
+import { createRoot } from './src/store/index.js';
 
 const root = createRoot(document.getElementById('root'));
 
@@ -116,7 +123,7 @@ const root = createRoot(document.getElementById('root'));
 root.render(App);
 ```
 
-**Step 6:** Use extension `Live Server`
+**Step 7:** Use extension `Live Server`, click `Go Live` below.
 
 **Result:**
 
